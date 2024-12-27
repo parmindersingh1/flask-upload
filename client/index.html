@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Upload</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF File Upload</h1>
+        <div class="upload-container">
+            <input type="file" id="pdfFile" accept=".pdf" />
+            <button id="uploadButton">Upload PDF</button>
+        </div>
+        <div id="successMessage" class="message success">File uploaded successfully!</div>
+        <div id="errorMessage" class="message error"></div>
+    </div>
+    <script type="module">
+        import { handleUpload } from './js/upload.js';
+        document.getElementById('uploadButton').addEventListener('click', handleUpload);
+    </script>
+</body>
+</html>
